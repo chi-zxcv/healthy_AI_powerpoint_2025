@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>當 AI 走進餐桌：打造你的健康新習慣</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f5f7fb;
+    }
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 32px 16px 48px;
+    }
+    h1, h2, h3 {
+      margin: 0 0 12px;
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+    }
+    p {
+      margin: 6px 0;
+      font-size: 0.98rem;
+    }
+    .hero {
+      background: linear-gradient(135deg, #2f80ed, #56ccf2);
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+    .hero-title {
+      font-size: 1.9rem;
+      font-weight: 800;
+    }
+    .hero-subtitle {
+      font-size: 1.05rem;
+      opacity: 0.95;
+    }
+    .hero-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hero-quote {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+    .section {
+      background: #fff;
+      border-radius: 16px;
+      padding: 20px 18px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .section-tag {
+      font-size: 0.8rem;
+      color: #2f80ed;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #eef3ff;
+      color: #2f80ed;
+      font-size: 0.75rem;
+      margin-right: 8px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .stat-card {
+      background: #f7f9ff;
+      border-radius: 12px;
+      padding: 12px 12px 10px;
+      border: 1px solid #e0e6ff;
+    }
+    .stat-value {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #2f80ed;
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .stat-desc {
+      font-size: 0.85rem;
+      color: #555;
+    }
+    .list {
+      padding-left: 1.1rem;
+      margin: 6px 0;
+    }
+    .list li {
+      margin-bottom: 4px;
+      font-size: 0.95rem;
+    }
+    .highlight {
+      color: #e67e22;
+      font-weight: 700;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .cta-main {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .cta-note {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .cta-button {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, #f2994a, #f2c94c);
+      color: #222;
+      font-weight: 700;
+      font-size: 0.98rem;
+      cursor: pointer;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.16);
+    }
+    .cta-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.2);
+    }
+    @media (min-width: 768px) {
+      .hero {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .hero-main {
+        max-width: 65%;
+      }
+      .hero-side {
+        max-width: 30%;
+        font-size: 0.9rem;
+        opacity: 0.95;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Hero 區塊 -->
+    <section class="hero">
+      <div class="hero-main">
+        <div class="hero-tag">Health Tech Talk</div>
+        <div class="hero-title">當 AI 走進餐桌：打造你的健康新習慣</div>
+        <p class="hero-subtitle">
+          忙碌的資深上班族，總是替手機充電，卻忘了幫自己「補能量」。
+          今天，我想用最生活化的方式，跟你聊聊：當 AI 走進餐桌，我們怎麼讓健康變得更輕鬆、也更聰明。
+        </p>
+      </div>
+      <div class="hero-side">
+        <p class="hero-quote">
+          「每天手機提醒充電，我們卻沒提醒自己該休息、該補營養 —— 
+          這，就是現代人最常見的健康錯覺。」
+        </p>
+      </div>
+    </section>
+
+    <!-- 痛點：隱形疲勞 -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag">痛點</span>
+        <h2>忙碌下的「隱形疲勞」與健康錯覺</h2>
+      </div>
+      <p>
+        你是否常常覺得：<span class="highlight">專注力下降、體力變差</span>，但每次檢查身體又「好像沒生病」？
+        這很可能不是你想太多，而是「隱形疲勞」正在敲門。
+      </p>
+      <p>
+        健康不是感受，而是數據。你以為沒事，只是因為「還沒壞到要送急診」，
+        但身體的數字，很可能早就亮起了紅燈。
+      </p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value">74%</div>
+          <div class="stat-label">蛋白質攝取不足</div>
+          <div class="stat-desc">
+            專注力下降、體力不佳的常見原因之一，
+            很多上班族一整天「有吃飽，卻沒吃對」。
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">65%</div>
+          <div class="stat-label">膳食纖維不足</div>
+          <div class="stat-desc">
+            腸道蠕動變慢、代謝效率下降，整體活力也跟著打折，
+            久坐族更是首當其衝。
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">67.8%</div>
+          <div class="stat-label">維生素攝取不足</div>
+          <div class="stat-desc">
+            維生素缺乏會影響免疫力與新陳代謝，
+            讓你更容易疲勞、恢復速度變慢。
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top:10px;">
+        很多時候，我們不是不健康，而是<span class="highlight">「不察覺自己正在走向不健康」</span>。
+      </p>
+    </section>
+
+    <!-- 解方：AI 工程化解法 -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag">解方</span>
+        <h2>讓 AI 簡化健康：只需「拍照」的工程化解方</h2>
+      </div>
+      <p>
+        好消息是，你不需要變成營養師，也不用背一大堆熱量表。
+        對於已經很忙的上班族，我只要求你做一件事：<span class="highlight">吃之前，先拍一張照。</span>
+      </p>
+
+      <h3>你只需要這一步：拍照紀錄飲食 ＋ 問 ChatGPT / AI 助理</h3>
+      <ul class="list">
+        <li><strong>拍照紀錄飲食：</strong>只需一鍵拍照，系統就能辨識餐點內容與大致份量。</li>
+        <li><strong>AI 自動計算營養缺口：</strong>分析蛋白質、膳食纖維與維生素等攝取量，告訴你今天「差在哪裡」。</li>
+        <li><strong>生成個人化建議：</strong>不是抽象的建議，而是像「今晚蛋白質再多補 20g」「明天午餐多一份蔬菜」。</li>
+      </ul>
+
+      <p>
+        最難的算數、最複雜的判斷，都交給 AI。<br />
+        你只要看懂一句話：「<span class="highlight">我今天還差哪一塊沒補好？</span>」
+      </p>
+      <p>
+        對工程師來說，這就像在生活中多加了一個「健康除錯系統」；
+        對一般上班族來說，則是多了一位不會唸你、只會幫你的小小健康顧問。
+      </p>
+    </section>
+
+    <!-- 價值 / 呼籲 -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag">價值 / 呼籲</span>
+        <h2>健康新定義：AI 讓你能量回來，輕鬆無負擔</h2>
+      </div>
+      <p>
+        我想邀請你，先暫時把「變瘦」、「減幾公斤」放一邊。
+        對資深上班族來說，<span class="highlight">真正的健康指標是：你還有多少專注力，還剩多少對生活的熱情。</span>
+      </p>
+      <p>
+        當 AI 幫你看懂每天吃進去的是什麼、少了什麼，
+        你會開始發現：下午不再那麼想睡、加班不再那麼崩潰，
+        早上醒來的那一口氣，變得比較輕盈。
+      </p>
+      <p>
+        AI 不只是潮流科技，它其實是在替「普通人」打開一扇新的門：
+        不需要專業背景，也能用數據照顧自己，用系統化方式慢慢把身體養回來。
+      </p>
+
+      <div class="cta">
+        <div class="cta-main">
+          健康的未來，不再是複雜的數字遊戲，而是由智能科技輔助的簡單日常。
+        </div>
+        <div class="cta-note">
+          從今天開始，不妨讓 AI 也來照顧你一下 —— 下一餐開始，先拍一張照片，給未來的自己一個更有精神的早晨。
+        </div>
+        <button class="cta-button">
+          今天開始：讓 AI 參與你的下一餐
+        </button>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
